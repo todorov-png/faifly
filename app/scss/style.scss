@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;400;900&display=swap');
+
+$color-blue: #00e0d0;
+$font-playfair: 'Playfair Display';
+$size-h3-500: 2rem;
+$size-text-500: 1.3rem;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  min-width: 300px;
+  margin: 0 auto;
+  &-content {
+    box-sizing: border-box;
+    max-width: 96rem;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 4rem;
+  color: $color-blue;
+  font-family: 'Hammersmith One';
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid $color-blue;
+  &:hover {
+    background-color: $color-blue;
+    color: white;
+  }
+}
+
+.band {
+  width: 5rem;
+  border-bottom: 2px solid gray;
+  margin: 0 auto;
+}
+
+.pop-up-notification {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  &__text {
+    display: inline-block;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 2rem 2rem;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+
+
+@import 'header.scss';
+
+@import 'charts.scss';
+
+@import 'about.scss';
+
+@import 'contact.scss';
+
+@import 'expertise.scss';
+
+@import 'team.scss';
+
+@import 'testimonials.scss';
+
+@import 'works.scss';
+
+@import 'footer.scss';
+
+@media (max-width: 960px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 864px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}

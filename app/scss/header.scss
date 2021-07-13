@@ -1,0 +1,122 @@
+.header {
+  background-image: url('/images/header/fon.png');
+  background-size: cover;
+  background-position: center;
+  &-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    img {
+      height: 5rem;
+    }
+  }
+  &-nav {
+    .select {
+      color: $color-blue;
+    }
+    &__item {
+      text-decoration: none;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-left: 2.3rem;
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+  &-content {
+    text-align: center;
+    color: white; 
+    width: 100%;
+    .band {
+      border-bottom: 2px solid $color-blue;
+    }
+    &__slider-title {
+      font-family: $font-playfair;
+      font-weight: 900;
+      font-size: 3.2rem;
+      margin-top: 13.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.04rem;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+    &__slider-text {
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #9d97ac;
+      letter-spacing: 0.05rem;
+      line-height: 2.3rem;
+      word-spacing: 0.2rem;
+      max-width: 78rem;
+      margin: 2.4rem auto 4.8rem;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+    &__btn {
+      margin: 0 auto;
+      width: 12rem;
+      margin-bottom: 12.6rem;
+
+    }
+    &__slider-btn {
+      padding-bottom: 6.8rem;
+      .select {
+        background-color: $color-blue;
+        border-color: $color-blue;
+      } 
+    }
+    &__slider-dot {
+      box-sizing: border-box;
+      border: 1px solid rgb(197, 196, 196);
+      border-radius: 1rem;
+      background-color: transparent;
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 0.24rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &-top {
+      padding: 1.5rem 1rem;
+      img {
+        display: none;
+      }
+    }
+    &-nav {
+      display: flex;
+      justify-content: space-around; 
+      width: 100%;
+      &__item {
+        font-size: 1.2rem;
+        margin-left: 0rem;
+      }
+    }
+    &-content {
+      &__slider-title {
+        font-size: 3rem;
+        margin-top: 11rem;
+      }
+      &__slider-text {
+        font-size: $size-text-500;
+        margin: 2.4rem auto 4rem;
+        padding: 0 2rem;
+      }
+      &__btn {
+        margin-bottom: 10rem;
+      }
+      &__slider-btn {
+        padding-bottom: 6rem;
+      }
+    }
+  }
+}

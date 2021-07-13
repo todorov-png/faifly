@@ -1,0 +1,280 @@
+
+@mixin footer-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #f1ecec;
+  line-height: 2.6rem;
+  letter-spacing: 0.04rem;
+}
+.footer {
+  background: url('/images/footer/fon.png');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 7rem;
+  padding-top: 7.1rem;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &__item {
+      color: white;
+      margin: 0 1rem;
+      &-logo {
+        margin-bottom: 0.4rem;
+        height: 5rem;
+      }
+      p, address {
+        @include footer-text;
+      }
+      address {
+        margin-top: -0.35rem;
+        margin-left: 1.2rem;
+      }
+      &-title {
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: white;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        margin-bottom: 3.6rem;
+      }
+      &-phone {
+        display: flex;
+        a {
+          @include footer-text;
+          text-decoration: none;
+          margin-top: -0.3rem;
+          margin-left: 1rem;
+        }
+        img {
+          height: 1.7rem;
+        }
+      }
+      &-address{
+        display: flex;
+        margin-bottom: 1.5rem;
+        img {
+          height: 1.9rem;
+        }
+      }
+      &:last-child {
+        margin-left: 1.7rem;
+      }
+      &-form {
+        display: flex;
+        input {
+          width: calc(100% - 8.1rem);
+          margin-right: 1rem;
+          padding-left: 1.5rem;
+          box-sizing: border-box;
+          color: white;
+          &::placeholder{
+            color: #b0afb3;
+            letter-spacing: 0.1rem;
+            font-size: 1.3rem;
+          }
+          background: transparent;
+          border: 1px solid #b0afb3;
+        }
+        button {
+          height: 4.6rem;
+          width: 7rem;
+          background-color: rgba(#b0afb3, 0.7);
+          border: none;
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(white, 0.8);
+          }
+          img {
+            height: 2.5rem;
+          }
+        }
+      }
+      &-social {
+        margin-top: 2.6rem;
+        .footer-social-network {
+          list-style: none;
+          padding: 0;
+          a {
+            color: white;
+            border: 1px solid white;
+            border-radius: 2rem;
+            height: 3.3rem;
+            width: 3.3rem;
+            display: block;
+            text-align: center;
+            line-height: 3.5rem;
+            font-size: 1.5rem;
+          }
+          li {
+            display: inline-block;
+            margin-right: 0.6rem;
+          }
+          &__facebook:hover {
+            a {
+              border-color: #1877f2;
+              background-color: #1877f2;
+            }
+          }
+          &__twitter:hover {
+            a {
+              border-color: #41abe1;
+              background-color: #41abe1;
+            }
+          }
+          &__dribbble:hover {
+            a {
+              color: black;
+              background-color: white;
+            }
+          }
+          &__instagram:hover {
+            a {
+              background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+              border-color: transparent;
+            }
+          }
+          &__google:hover {
+            a {
+              border-color: #dd4b39;
+              background-color: #dd4b39;
+            }
+          }
+          &__youtube:hover {
+            a {
+              border-color: #ff0000;
+              background-color: #ff0000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 5.4rem 1rem 0;
+    span {
+      color:white;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
+    }
+    &__item {
+      a {
+        text-decoration: none;
+        color:white;
+        text-transform: uppercase;
+        margin-right: 3.1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0.04rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 610px) {
+  .footer {
+    padding: 5rem 0;
+    &-content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "a a"
+        "b c";
+      &__item {
+        &:nth-child(1) {
+          grid-area: a;
+          display: flex;
+          align-items: center;
+          p {
+            margin: 0;
+          }
+        }
+        &:nth-child(2) {
+          grid-area: b;
+        }
+        &:nth-child(3) {
+          grid-area: c;
+        }
+        margin: 0 1rem;
+        &-logo {
+          margin-bottom: 0;
+          margin-right: 2rem;
+        }
+      }
+    }
+    &-nav {
+      margin: 4rem 1rem 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footer {
+    &-content {
+      &__item {
+        p, address {
+          font-size: $size-text-500;
+        }
+        &-title {
+          font-size: $size-text-500;
+          margin-bottom: 2rem;
+        }
+        &-form input {
+          padding-left: 1.3rem;
+        }
+      }
+    }
+    &-nav {
+      span {
+        font-size: $size-text-500;
+      }
+      &__item {
+        a {
+          margin-right: 2rem;
+          font-size: $size-text-500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .footer {
+    padding: 3rem 0;
+    &-content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b"
+        "c";
+      &__item {
+        &:nth-child(1) {
+          display: block;
+        }
+        text-align: center;
+        
+        &-phone {
+          justify-content: center;
+        }
+      }
+    }
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2rem 1rem 0;
+      span {
+        margin-top: 1rem;
+      }
+      &__item {
+        a {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}

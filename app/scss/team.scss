@@ -1,0 +1,125 @@
+.team {
+  background-image: url(/images/content/team/fon.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  color: white;
+  padding-bottom: 6.9rem;
+  &-heading {
+    font-size: 2.2rem;
+    font-family: $font-playfair;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding-top: 6.2rem;
+    letter-spacing: 0.1rem;
+  }
+  &-description {
+    font-size: 1.4rem;
+    font-family: $font-playfair;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.8rem 0 1.6rem;
+    letter-spacing: 0.1rem;
+  }
+  &-person {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4.8rem auto 7rem;
+    &__item {
+      border: 1px solid rgba(white, 0.4);
+      margin: 0 1rem;
+      &:nth-child(1) {
+        .team-person__item-img {
+          background-image: url(/images/content/team/1.jpg);
+        }
+      }
+      &:nth-child(2) {
+        .team-person__item-img {
+          background-image: url(/images/content/team/2.jpg);
+        }
+      }
+      &:nth-child(3) {
+        .team-person__item-img {
+          background-image: url(/images/content/team/3.jpg);
+        }
+      }
+      &:nth-child(4) {
+        .team-person__item-img {
+          background-image: url(/images/content/team/4.jpg);
+        }
+      }
+      &-img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+      &-name {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 1.6rem;
+        margin-bottom: 0.55rem;
+        letter-spacing: 0.1rem;
+      }
+      &-position {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: gray;
+        text-transform: uppercase;
+        margin: 0 auto 2.2rem;
+      }
+    }
+  }
+  &-caption {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.07rem;
+    margin-bottom: 2.5rem;
+  }
+  &__btn {
+    width: 14rem;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .team {
+    padding-bottom: 5rem;
+    &-heading {
+      font-size: $size-h3-500;
+      font-family: $font-playfair;
+      padding-top: 5rem;
+    }
+    &-description {
+      font-size: $size-text-500;
+      font-family: $font-playfair;
+    }
+    &-person {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 3rem 1rem 5rem;
+      &__item {
+        margin: 1rem;
+        &-name {
+          font-size: $size-text-500;
+        }
+        &-position {
+          font-size: $size-text-500;
+          margin: 0 auto 2rem;
+        }
+      }
+    }
+    &-caption {
+      font-size: $size-text-500;
+      margin-bottom: 2rem;
+    }
+  }
+}

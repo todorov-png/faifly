@@ -1,0 +1,66 @@
+.charts {
+  &-wrapper {
+    position: relative;
+    width: 50rem;
+    height: 30rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+  }
+  &-field {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    width: calc(100% - 5rem);
+    height: calc(100% - 5rem);
+    background-color: rgb(218, 249, 255);
+    &__item {
+      position: absolute;
+      bottom: -1px;
+      z-index: 5;
+      &-text {
+        position: absolute;
+        bottom: -2.2rem;
+        transform: rotate(-90deg);
+        font-size: 1.4rem;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.horizontal-line{
+  background-color: rgba(128, 128, 128, 0.616);
+  width: 100%;
+  height: 1.1px;
+  position: absolute;
+  left: 0;
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 25%;
+  }
+  &:nth-child(3) {
+    top: 50%;
+  }
+  &:nth-child(4) {
+    top: 75%;
+  }
+  &:nth-child(5) {
+    top: 100%;
+  }
+  &__text {
+    position: absolute;
+    font-size: 1.6rem;
+    left: calc(100% + 0.4rem);
+    top: -0.95rem;
+  }
+}
+
+.wrapper-center {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,92 @@
+.testimonials {
+  background-image: url(/images/content/testimonials/fon.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  p {
+    margin: 0 auto;
+  }
+  &__quotes {
+    font-size: 10rem;
+    font-weight: 400;
+    font-family: $font-playfair;
+    padding-top: 7.5rem;
+    padding-bottom: 0.7rem;
+    line-height: 5rem;
+  }
+  &__text {
+    font-family: $font-playfair;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.04rem;
+    max-width: calc(100% / 12 * 10) ;
+    padding-bottom: 4.6rem;
+  }
+  &__name {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    padding-bottom: 0.7rem;
+  }
+  &__position {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.3rem;
+    letter-spacing: 0.01rem;
+    padding-bottom: 4rem;
+  }
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6.8rem;
+    &-container-img {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      height: 4.5rem;
+      width: 4.5rem;
+    }
+    &-item {
+      margin: 0 0.7rem;
+    }
+    .active {
+      img {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+    &-back, &-forward {
+      color: gray;
+      margin: 0 2.2rem;
+      font-size: 2.5rem;
+      
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .testimonials {
+    &__quotes {
+      font-size: 8rem;
+      padding-top: 5rem;
+    }
+    &__text {
+      font-size: $size-text-500;
+      padding-bottom: 3rem;
+    }
+    &__position {
+      font-size: $size-text-500;
+      padding-bottom: 3rem;
+    }
+    &__slider {
+      padding-bottom: 5rem;
+    }
+  }
+}

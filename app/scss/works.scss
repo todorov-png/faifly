@@ -1,0 +1,58 @@
+.works {
+  padding-top: 6.2rem;
+  &__text {
+    margin: 0 1rem 6.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h3 {
+      text-transform: uppercase;
+      color: #413d4b;
+      font-weight: bold;
+      font-size: 2.2rem;
+      font-family: $font-playfair;
+      margin: 0;
+      letter-spacing: 0.1rem;
+    }
+    a {
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-decoration: none;
+      color: black;
+      line-height: 3rem;
+      letter-spacing: 0.085rem;
+      box-sizing: border-box;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    font-size: 0;
+  }
+  &__btn {
+    width: 14rem;
+    margin: 6.9rem auto;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .works {
+    padding-top: 5rem;
+    &__text {
+      margin: 0 1rem 5rem;
+      h3 {
+        font-size: $size-h3-500;
+      }
+      a {
+        font-size: $size-text-500;
+      }
+    }
+    &__btn {
+      margin: 5rem auto;
+    }
+  }
+}
